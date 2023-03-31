@@ -1,0 +1,8 @@
+{
+    "extends": "standard-with-typescript",
+    "@typescript-eslint/strict-boolean-expressions": "warn",
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
+    "parserOptions": {
+      "project": "./CleanNodeApi/tsconfig.json"
+    }
+}
