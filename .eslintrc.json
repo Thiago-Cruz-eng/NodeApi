@@ -1,7 +1,8 @@
 {
     "extends": "standard-with-typescript",
     "parserOptions": {
-      "project": "./CleanNodeApi/tsconfig.json"
+      //"project": "./CleanNodeApi/tsconfig.json"
+      "project": "./tsconfig.json"
     },
     "rules": {
       "@typescript-eslint/strict-boolean-expressions": "off",
@@ -12,6 +13,10 @@
       "@typescript-eslint/no-misused-promises": "off",
       "@typescript-eslint/no-namespace": "off",
       "import/export": "off",
-      "@typescript-eslint/prefer-nullish-coalescing": "off"
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/indent" : "off",
+      "no-tabs": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/consistent-type-imports": "off"
     }
 }

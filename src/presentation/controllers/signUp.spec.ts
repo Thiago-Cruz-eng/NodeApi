@@ -1,7 +1,7 @@
 import { SignUpController } from './signUp'
 
 describe('Sign Up Controller', () => {
-  test('Should return 400 i no name if provider', () => {
+  test('Should return 400 if no name is provider', () => {
     // sempre comeco instancxiando a classe
     const sut = new SignUpController()
     const httpRequest = {
@@ -18,7 +18,7 @@ describe('Sign Up Controller', () => {
 })
 
 describe('Sign Up Controller', () => {
-  test('Should return 400 i no name if provider', () => {
+  test('Should return 400 is no email is provider', () => {
     // sempre comeco instancxiando a classe
     const sut = new SignUpController()
     const httpRequest = {
