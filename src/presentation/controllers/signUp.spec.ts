@@ -3,7 +3,6 @@ import { MissingParamError } from '../errors/missingParamError'
 
 describe('Sign Up Controller', () => {
   test('Should return 400 if no name is provider', () => {
-    // sempre comeco instancxiando a classe
     const sut = new SignUpController()
     const httpRequest = {
       body: {
@@ -16,11 +15,8 @@ describe('Sign Up Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('name'))
   })
-})
 
-describe('Sign Up Controller', () => {
-  test('Should return 400 is no email is provider', () => {
-    // sempre comeco instancxiando a classe
+  test('Should return 400 if no email is provider', () => {
     const sut = new SignUpController()
     const httpRequest = {
       body: {
@@ -32,5 +28,19 @@ describe('Sign Up Controller', () => {
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
+  })
+
+  test('Should return 400 if no password is provider', () => {
+    const sut = new SignUpController()
+    const httpRequest = {
+      body: {
+        email: 'abc@gmail.com',
+        name: 'Thiago',
+        passwordConfirmation: '123456789'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
 })
