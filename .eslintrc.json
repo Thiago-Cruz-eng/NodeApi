@@ -17,6 +17,7 @@
       "@typescript-eslint/indent" : "off",
       "no-tabs": "off",
       "@typescript-eslint/no-unused-vars": "off",
-      "@typescript-eslint/consistent-type-imports": "off"
+      "@typescript-eslint/consistent-type-imports": "off",
+      "@typescript-eslint/method-signature-style": "off"
     }
 }
